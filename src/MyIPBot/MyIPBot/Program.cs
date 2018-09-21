@@ -62,8 +62,9 @@ namespace MyIPBot
                 default:
                     const string usage = @"
 Usage:
-/myip   - return your IP address
-/raport - return the default remote access port
+/showmyid - helpful to discover your ID and add at authorized ID's
+/myip     - return your IP address
+/raport   - return the default remote access port
 ";
 
                     await _bot.SendTextMessageAsync(message.Chat.Id, usage, replyMarkup: new ReplyKeyboardRemove());
