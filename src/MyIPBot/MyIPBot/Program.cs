@@ -19,9 +19,9 @@ namespace MyIPBot
 
         private static readonly TelegramBotClient _bot = new TelegramBotClient(_config["TelegramToken"]);
 
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            var me = _bot.GetMeAsync().Result;
+            var me = await _bot.GetMeAsync();
             Console.Title = me.Username;
 
             _bot.OnMessage += BotOnMessageReceived;
